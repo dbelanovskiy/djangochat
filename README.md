@@ -88,4 +88,4 @@
 * **Новости / Статьи (News)** — публикация новых записей, редактирование текстов и удаление существующих новостей на сайте.
 существующих новостей на сайте.
 ## Демонстрация работы
-<img width="2558" height="1438" alt="Анимация" src="https://github.com/user-attachments/assets/0a3a91a2-641a-4e65-99e5-fd3acfd523bf" />
+<img width="1201" height="675" alt="Анимация" src="https://github.com/user-attachments/assets/0f8678c3-4d1a-4677-ab5d-505976bef8df" />
