@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Главная | {% endblock %}
+
+{% block content %}
+<div class="p-10 lg:p-20 text-center">
+    <h1 class="text-3xl lg:text-6xl text-black"></h1>
+</div>
+<div class=" p-20  text-left">
+    <h1 class="  lg:text-3xl lg:text-2xl text-black">Сайт сделал </h1>
+    <a class="  lg:text-3xl lg:text-2xl text-black">Белановский Дмитрий Витальевич</a>
+    <h2  class="   lg:text-3xl lg:text-2xl text-black">Контакты:</h2>
+    <div >
+        <img class="" style=" float: left"  src="{% static 'main/img/tg.png' %}" height="33" width="33"  alt="">
+        <a href="https://t.me/" class=" px-5 py-3  hover:text-blue-400 lg:text-3xl lg:text-2xl ">Telegram - ???</a>
+    </div>
+    <div>
+         <img class="" style=" float: left"  src="{% static 'main/img/vk.png' %}" height="33" width="33"  alt="">
+        <a href="https://vk.com/" class=" px-5 py-3 hover:text-blue-300 lg:text-3xl lg:text-2xl ">ВК - ??? </a>
+    </div>
+    <div>
+        <img class="" style=" float: left"  src="{% static 'main/img/phone.png' %}" height="33" width="33"  alt="">
+        <a class=" px-5 py-3 lg:text-3xl lg:text-2xl text-black">Номер - ???</a>
+    </div>
+</div>
+<div class=" p-10 space-x-4 flex item-left" >
+    {% if request.user.is_authenticated %}
+    <a href="/news/" class="px-6 py-3 lg:text-3xl lg:text-2xl rounded-xl text-white bg-gray-900 hover:bg-gray-800  ">Новости</a>
+    <a href="/rooms/" class="px-6 py-3 lg:text-3xl lg:text-2xl rounded-xl text-white bg-gray-900 hover:bg-gray-800  ">Чаты</a>
+    {% else %}
+    <a href="/login/" class="px-6 py-3 lg:text-3xl lg:text-2xl rounded-xl  text-white bg-gray-900 hover:bg-gray-800">Войти</a>
+
+    <a href="/signup/" class="px-6 py-3 lg:text-3xl lg:text-2xl rounded-xl  text-white bg-gray-900 hover:bg-gray-800">Регистрация</a>
+    {% endif %}
+</div>
+
+
+{% endblock %}

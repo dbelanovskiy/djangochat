@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}{{ article.title }} | {% endblock %}
+
+{% block content %}
+
+<div class="w-full mt-2 px-4 py-2 rounded-xl bg-gray-300 text-center">
+    <h1 class="text-3xl lg:text-6xl text-black">{{ article.title }}</h1>
+    <p>{{ article.date }}</p>
+    <p>{{ article.full_text }}</p>
+    <div class=" p-10 space-x-4 flex item-left" >
+    {% if request.user.is_authenticated %}
+
+    {% else %}
+    <a href="/login/" class="px-6 py-3 lg:text-3xl lg:text-2xl rounded-xl text-white bg-black hover:bg-gray-700">Войти</a>
+
+    <a href="/signup/" class="px-6 py-3 lg:text-3xl lg:text-2xl rounded-xl text-white bg-black hover:bg-gray-700">Регистрация</a>
+    {% endif %}
+</div>
+
+</div>
+
+</div>
+
+
+
+{% endblock %}

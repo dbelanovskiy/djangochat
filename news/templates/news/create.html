@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Опубликовать новость | {% endblock %}
+
+{% block content %}
+<div class="p-10 lg:p-20 text-center">
+    <h1 class="text-3xl lg:text-6xl text-black">Опубликовать новость</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}
+        {{ form.anons }}
+        {{ form.full_text }}
+        {{ form.date }}
+        <span>{{ error }}</span>
+        <button class="px-5 py-3 rounded-xl text-white bg-gray-900 hover:bg-gray-800" type="submit">Опубликовать статью</button>
+    </form>
+</div>
+
+</div>
+<div class=" p-10 space-x-4 flex item-left" >
+    {% if request.user.is_authenticated %}
+
+    {% else %}
+    <a href="/login/" class="px-6 py-3 lg:text-3xl lg:text-2xl rounded-xl text-white bg-black hover:bg-gray-700">Войти</a>
+
+    <a href="/signup/" class="px-6 py-3 lg:text-3xl lg:text-2xl rounded-xl text-white bg-black hover:bg-gray-700">Регистрация</a>
+    {% endif %}
+</div>
+
+
+{% endblock %}
