@@ -30,7 +30,9 @@
                     <form action="/logout/" method="post" class="inline">
     {% csrf_token %}
     <button type="submit" class="px-5 py-3 rounded-xl text-white bg-red hover:bg-red-400">Выйти</button>
-</form>
+</form>git rm --cached db.sqlite3
+
+
                 {% else %}
                     <a href="/login/" class="px-5 py-3 rounded-xl text-white bg-red hover:bg-red-400">Войти</a>
             
